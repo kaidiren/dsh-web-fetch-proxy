@@ -1,0 +1,12 @@
+# dsh-web-fetch-proxy bundle patch
+# 1) 注册走代理的 fetch provider（id=proxy）。
+# 2) 覆盖 web 行：fetchProvider 固定为 proxy，安装即默认用本 provider（无需环境变量）。
+- insert:
+    - id: dsh-web-fetch-proxy
+      name: dsh-web-fetch-proxy
+      config:
+        proxy: 'socks5://127.0.0.1:1086'
+
+- id: web
+  config:
+    fetchProvider: proxy

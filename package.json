@@ -1,0 +1,31 @@
+{
+  "name": "dsh-web-fetch-proxy",
+  "version": "0.1.0",
+  "description": "web_fetch 走 SOCKS5/HTTP 代理抓取的 fetch provider（复刻 net_fetch 思路，绕开本地 fake-ip 的 SSRF 校验）",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0",
+    "@deepseek-ai/dsh-web": ">=0.1.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/local/dsh-web-fetch-proxy.git"
+  }
+}
