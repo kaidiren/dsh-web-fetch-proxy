@@ -28,5 +28,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/local/dsh-web-fetch-proxy.git"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "linkedom": "^0.18.13"
   }
 }
